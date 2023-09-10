@@ -25,7 +25,7 @@ public class ModelStudent {
     private int PESEL;
     @Column(nullable = false)
     private Date BirthDay;
-    @Column(nullable = false)
+    @JoinColumn(name = "Classes_ClassId")
     private Long ClassName;
 
     public ModelStudent(Long idStudent, String name, String secondName, String lastname, int PESEL, Date birthDay, Long className) {
